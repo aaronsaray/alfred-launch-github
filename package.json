@@ -1,0 +1,14 @@
+{
+  "name": "@aaronsaray/alfred-launch-github",
+  "version": "0.1.0",
+  "description": "Alfred Workflow to Launch Github",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "file-system-cache": "^2.4.4",
+    "fuse.js": "^7.0.0",
+    "node-fetch": "^3.3.2",
+    "octokit": "^3.1.2"
+  }
+}
