@@ -64,7 +64,7 @@
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>index.js</string>
+				<string>search.js</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -147,7 +147,7 @@
 		</dict>
 	</array>
 	<key>version</key>
-	<string>0.1.0</string>
+	<string>0.2.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/aaronsaray/alfred-launch-github</string>
 </dict>

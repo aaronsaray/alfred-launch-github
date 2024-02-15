@@ -1,8 +1,8 @@
 {
   "name": "@aaronsaray/alfred-launch-github",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Alfred Workflow to Launch Github",
-  "main": "index.js",
+  "main": "search.js",
   "license": "MIT",
   "type": "module",
   "dependencies": {

@@ -1,16 +1,15 @@
 #!/usr/bin/env node
 
-import Fuse from 'fuse.js'
-import getData from './data.js';
+import { repos } from './lib/data.js';
 import alfredResultsFormatter from './alfred-results-formatter.js';
 
 async function main(searchTerm) {
-    const repos = await getData();
+    const allRepos = await repos();
 
     let searchResults = null;
 
     if (searchTerm) {
-        const fuse = new Fuse(repos, {
+        const fuse = new Fuse(allRepos, {
             useExtendedSearch: true
         });
         searchResults = fuse.search(searchTerm);
