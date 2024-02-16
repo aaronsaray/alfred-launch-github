@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import Fuse from 'fuse.js';
 import { repos } from './lib/data.js';
 import alfredResultsFormatter from './alfred-results-formatter.js';
 

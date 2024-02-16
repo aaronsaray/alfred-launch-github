@@ -8,11 +8,37 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
-		<key>984D20F0-98DD-4FDB-9445-67AFDDC7EBBC</key>
+		<key>4BE4768A-EE9B-47C3-8534-1D13F72F4F05</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>5883D11B-F76E-4C68-990F-F2EFFCA3525D</string>
+				<string>96A03B85-6A19-4ECD-8692-36D21965ACE5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>96A03B85-6A19-4ECD-8692-36D21965ACE5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7EA34CE1-13AF-42AA-81BA-48959CC7C463</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EC47B197-2998-4FB1-83B1-97DE219962C6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>92A0E1B0-9B41-4D4D-81B8-AB9775C58BC6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -35,6 +61,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<true/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>92A0E1B0-9B41-4D4D-81B8-AB9775C58BC6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -44,7 +91,7 @@
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
@@ -58,7 +105,7 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Retrieving...</string>
+				<string>Loading repos...</string>
 				<key>script</key>
 				<string></string>
 				<key>scriptargtype</key>
@@ -68,7 +115,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Repository / Org</string>
+				<string>Search repo or org</string>
 				<key>type</key>
 				<integer>8</integer>
 				<key>withspace</key>
@@ -77,49 +124,116 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>984D20F0-98DD-4FDB-9445-67AFDDC7EBBC</string>
+			<string>EC47B197-2998-4FB1-83B1-97DE219962C6</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>gh refresh</string>
+				<key>subtext</key>
 				<string></string>
-				<key>skipqueryencode</key>
+				<key>text</key>
+				<string>Refresh the repositories</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4BE4768A-EE9B-47C3-8534-1D13F72F4F05</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
 				<true/>
-				<key>skipvarencode</key>
-				<true/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Github Repositories Refreshed</string>
+				<key>title</key>
 				<string>{query}</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>5883D11B-F76E-4C68-990F-F2EFFCA3525D</string>
+			<string>7EA34CE1-13AF-42AA-81BA-48959CC7C463</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>refresh.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>96A03B85-6A19-4ECD-8692-36D21965ACE5</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string>This launches Github repository landing page for whatever you search / have access to.</string>
 	<key>uidata</key>
 	<dict>
-		<key>5883D11B-F76E-4C68-990F-F2EFFCA3525D</key>
+		<key>4BE4768A-EE9B-47C3-8534-1D13F72F4F05</key>
 		<dict>
 			<key>xpos</key>
-			<real>425</real>
+			<real>60</real>
 			<key>ypos</key>
-			<real>270</real>
+			<real>320</real>
 		</dict>
-		<key>984D20F0-98DD-4FDB-9445-67AFDDC7EBBC</key>
+		<key>7EA34CE1-13AF-42AA-81BA-48959CC7C463</key>
 		<dict>
 			<key>xpos</key>
-			<real>210</real>
+			<real>500</real>
 			<key>ypos</key>
-			<real>270</real>
+			<real>325</real>
+		</dict>
+		<key>92A0E1B0-9B41-4D4D-81B8-AB9775C58BC6</key>
+		<dict>
+			<key>note</key>
+			<string>Open Github page</string>
+			<key>xpos</key>
+			<real>300</real>
+			<key>ypos</key>
+			<real>170</real>
+		</dict>
+		<key>96A03B85-6A19-4ECD-8692-36D21965ACE5</key>
+		<dict>
+			<key>xpos</key>
+			<real>300</real>
+			<key>ypos</key>
+			<real>325</real>
+		</dict>
+		<key>EC47B197-2998-4FB1-83B1-97DE219962C6</key>
+		<dict>
+			<key>xpos</key>
+			<real>60</real>
+			<key>ypos</key>
+			<real>170</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
